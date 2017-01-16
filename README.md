@@ -90,7 +90,7 @@ throw Boom.notFound(errorMessage, errorData);
 const errorMessage = `User with id: ${userId} not found`;
 const errorData = { userId };
 const errorName = 'USER_NOT_FOUND';
-throw Boom.notFound(errorMessage, errorData, errorName);
+throw SevenBoom.notFound(errorMessage, errorData, errorName);
 ```
 #### Error result
 ```js
