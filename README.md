@@ -85,6 +85,10 @@ throw Boom.notFound(errorMessage, errorData, errorName);
 }
 ```
 
+## Real example
+The best way to understand is always look on some real code.
+Therefore you can take a look on [graphql-apollo-errors](https://github.com/GiladShoham/graphql-apollo-errors) which use SevenBoom internally to handle graphql / apollo errors in a better way.
+
 ## License
 MIT - Do what ever you want
 
