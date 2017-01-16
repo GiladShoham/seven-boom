@@ -28,3 +28,24 @@ Then you can start change your usage every place you want (if you added more arg
 ## How does it work?
 Under the hood, SevenBoom is preety simple, it just going over all Boom function and wrap them with new functions with the same name.
 Then when you call the SevenBoom function it will internally call Boom then add your new args, and run your functions
+
+## Configure
+
+## Usage
+###Before
+```js
+const errorMessage = `User with id: ${userId} not found`;
+const errorData = { userId };
+throw Boom.notFound(errorMessage, errorData);	
+```
+After
+```js
+const errorMessage = `User with id: ${userId} not found`;
+const errorData = { userId };
+const errorName = 'USER_NOT_FOUND';
+throw Boom.notFound(errorMessage, errorData, errorName);
+```
+## License
+MIT - Do what ever you want
+
+## Contribute
