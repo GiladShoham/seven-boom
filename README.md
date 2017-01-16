@@ -14,7 +14,7 @@ In a lot of apps the errors contain more data on the root level. some common exa
 ## What do i get with this library?
 SevenBoom give you an ability to init the SevenBoom object with your desired error format. 
 * You can add new root fields which from now will be an args for any of your error.
-* You can add functions which will called any time your create new error (pass a guid generator / or time (now) generator is great example for this feature.
+* You can add functions which will called any time you create new error (pass a guid generator / or time (now) generator is great example for this feature.
 
 ## What include out of the box?
 * A guid generator (by uuid.v4) which will add guid field for any of your errors
