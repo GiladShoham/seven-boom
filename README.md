@@ -18,6 +18,7 @@ A decorator around [Boom](https://github.com/hapijs/boom) (HTTP-friendly error o
       - [Code](#code-1)
       - [Error result:](#error-result-1)
   * [Real example](#real-example)
+  * [Source of the name](#Source of the name)
   * [License](#license)
   * [Contribute](#contribute)
 
@@ -26,8 +27,9 @@ A decorator around [Boom](https://github.com/hapijs/boom) (HTTP-friendly error o
 
 ## Why do I need this
 The reason beyond this library is to have more cusomize errors.
-Boom provide very cool interface and function to create new errors, yet most of the errors are only get message(String) and data(Object) as arguments.
-Then boom will add some other cool keys to the error object like isServer, isBoom and so on.
+Boom provide very cool interface and functions to create new errors, yet most of the errors are only get message(String) and data(Object) as arguments.
+Then boom will add some more keys to the error object like isServer, isBoom and so on.
+Most of the hard work are done by Boom guys, so they should get a proper credit.
 
 In a lot of apps the errors contain more data on the root level. some common examples are:
 * guid of the error (as id in database or for better look for it in the db / log)
@@ -56,6 +58,8 @@ Then when you call the SevenBoom function it will internally call Boom then add 
 Coming soon
 
 ## Usage
+You should start by reading Boom docs, it's very easy and intuitive.
+
 ### Before
 #### Code
 ```js
@@ -111,6 +115,10 @@ throw Boom.notFound(errorMessage, errorData, errorName);
 ## Real example
 The best way to understand is always look on some real code.
 Therefore you can take a look on [graphql-apollo-errors](https://github.com/GiladShoham/graphql-apollo-errors) which use SevenBoom internally to handle graphql / apollo errors in a better way.
+
+## Source of the name
+The name seven-boom is a wordplay - it's a combination of the boom (as the base library) and seven boom which is a simple game.
+See more about seven-boom game [here](https://play.google.com/store/apps/details?id=com.krembo.seven)
 
 ## License
 MIT - Do what ever you want
