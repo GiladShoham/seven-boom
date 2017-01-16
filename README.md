@@ -21,7 +21,7 @@ A decorator around [Boom](https://github.com/hapijs/boom) (HTTP-friendly error o
   * [License](#license)
   * [Contribute](#contribute)
 
-
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 <!-- tocstop -->
 
 ## Why do I need this
