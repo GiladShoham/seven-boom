@@ -87,6 +87,8 @@ throw Boom.notFound(errorMessage, errorData);
 ### After
 #### Code
 ```js
+import SevenBoom from 'seven-boom';
+
 const errorMessage = `User with id: ${userId} not found`;
 const errorData = { userId };
 const errorName = 'USER_NOT_FOUND';
