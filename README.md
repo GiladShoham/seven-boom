@@ -56,14 +56,37 @@ throw Boom.notFound(errorMessage, errorData);
 }
 ```
 
-After
+### After
+#### Code
 ```js
 const errorMessage = `User with id: ${userId} not found`;
 const errorData = { userId };
 const errorName = 'USER_NOT_FOUND';
 throw Boom.notFound(errorMessage, errorData, errorName);
 ```
+#### Error result:
+```js
+{
+  isBoom: true,
+  isServer: false, 
+  message: 'User with id: 123 not found.'
+  output: {
+    statusCode: '404'
+    payload: {
+      statusCode: '404'
+      error: 'Not Found'
+      message: 'User with id: 123 not found.'
+      code: 'USER_NOT_FOUND'
+      timeThrown: "2017-01-16T21:25:58.536Z"
+      guid: 'b6c44655-0aae-486a-8d28-533db6c6c343'
+    }
+  }
+}
+```
+
 ## License
 MIT - Do what ever you want
 
 ## Contribute
+I'm open to hear any feedback - new ideas, bugs, needs.
+Feel free to open issues / PR
