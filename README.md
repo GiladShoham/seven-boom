@@ -32,12 +32,30 @@ Then when you call the SevenBoom function it will internally call Boom then add 
 ## Configure
 
 ## Usage
-###Before
+### Before
+#### Code
 ```js
 const errorMessage = `User with id: ${userId} not found`;
 const errorData = { userId };
 throw Boom.notFound(errorMessage, errorData);	
 ```
+#### Error result:
+```js
+{
+  isBoom: true,
+  isServer: false, 
+  message: 'User with id: 123 not found.'
+  output: {
+    statusCode: '404'
+    payload: {
+      statusCode: '404'
+      error: 'Not Found'
+      message: 'User with id: 123 not found.'
+    }
+  }
+}
+```
+
 After
 ```js
 const errorMessage = `User with id: ${userId} not found`;
