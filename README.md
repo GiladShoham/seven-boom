@@ -30,6 +30,7 @@ Under the hood, SevenBoom is preety simple, it just going over all Boom function
 Then when you call the SevenBoom function it will internally call Boom then add your new args, and run your functions
 
 ## Configure
+Coming soon
 
 ## Usage
 ### Before
