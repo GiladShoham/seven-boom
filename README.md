@@ -18,7 +18,7 @@ A decorator around [Boom](https://github.com/hapijs/boom) (HTTP-friendly error o
       - [Code](#code-1)
       - [Error result:](#error-result-1)
   * [Real example](#real-example)
-  * [Source of the name](#Source-of-the-name)
+  * [Source of the name](#source-of-the-name)
   * [License](#license)
   * [Contribute](#contribute)
 
