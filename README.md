@@ -63,9 +63,11 @@ You should start by reading Boom docs, it's very easy and intuitive.
 ### Before
 #### Code
 ```js
-const errorMessage = `User with id: ${userId} not found`;
-const errorData = { userId };
-throw Boom.notFound(errorMessage, errorData);	
+function getUserById(userId) {
+ const errorMessage = `User with id: ${userId} not found`;
+ const errorData = { userId };
+ throw Boom.notFound(errorMessage, errorData);	
+}
 ```
 #### Error result
 ```js
@@ -91,10 +93,12 @@ throw Boom.notFound(errorMessage, errorData);
 ```js
 import SevenBoom from 'seven-boom';
 
-const errorMessage = `User with id: ${userId} not found`;
-const errorData = { userId };
-const errorName = 'USER_NOT_FOUND';
-throw SevenBoom.notFound(errorMessage, errorData, errorName);
+function getUserById(userId) {
+ const errorMessage = `User with id: ${userId} not found`;
+ const errorData = { userId };
+ const errorName = 'USER_NOT_FOUND';
+ throw SevenBoom.notFound(errorMessage, errorData, errorName);
+ }
 ```
 #### Error result
 ```js
