@@ -2,6 +2,7 @@
 A decorator around [Boom](https://github.com/hapijs/boom) (HTTP-friendly error objects) to empower it
 
 [![CircleCI](https://circleci.com/gh/GiladShoham/seven-boom/tree/master.svg?style=svg&circle-token=56ee1bfc2964727d5d468cc2f2b2216054cee97f)](https://circleci.com/gh/GiladShoham/seven-boom/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/GiladShoham/seven-boom/badge.svg)](https://coveralls.io/github/GiladShoham/seven-boom)
 
 <!-- toc -->
 
