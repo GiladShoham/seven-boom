@@ -42,7 +42,8 @@
     "mocha-lcov-reporter": "^1.2.0",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "regenerator-runtime": "^0.10.1"
   },
   "dependencies": {
     "boom": "^4.2.0",
