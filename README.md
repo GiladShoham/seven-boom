@@ -40,7 +40,7 @@ In a lot of apps the errors contain more data on the root level. some common exa
 * timeThrown for analytical purposes
 
 ## What do i get with this library
-SevenBoom give you an ability to init the SevenBoom object with your desired error format. 
+SevenBoom give you an ability to init the SevenBoom object with your desired error format.
 * You can add new root fields which from now will be an args for any of your error.
 * You can add functions which will called any time you create new error (pass a guid generator / or time (now) generator is great example for this feature.
 
@@ -49,7 +49,7 @@ SevenBoom give you an ability to init the SevenBoom object with your desired err
 * timeThrown generator (date.isoString) which will add timeThrown for any of your errors
 
 ## Boom compatability
-In order to make the transition from Boom easiear, the SevenBoom args will be in the same order as the default Boom args. 
+In order to make the transition from Boom easiear, the SevenBoom args will be in the same order as the default Boom args.
 So you can simply replace all of your Boom.XXX with SevenBoom.XXX and everything should work just fine.
 Then you can start change your usage every place you want (if you added more args).
 
@@ -69,14 +69,14 @@ You should start by reading Boom docs, it's very easy and intuitive.
 function getUserById(userId) {
  const errorMessage = `User with id: ${userId} not found`;
  const errorData = { userId };
- throw Boom.notFound(errorMessage, errorData);	
+ throw Boom.notFound(errorMessage, errorData);
 }
 ```
 #### Error result
 ```js
 {
   isBoom: true,
-  isServer: false, 
+  isServer: false,
   message: 'User with id: 123 not found.',
   data: {userId: '123'},
   output: {
@@ -107,7 +107,7 @@ function getUserById(userId) {
 ```js
 {
   isBoom: true,
-  isServer: false, 
+  isServer: false,
   message: 'User with id: 123 not found.',
   data: {userId: '123'},
   output: {
