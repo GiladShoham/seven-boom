@@ -193,6 +193,7 @@ function getUserById(userId) {
 ## Real example
 The best way to understand is always look on some real code.
 Therefore you can take a look on [graphql-apollo-errors](https://github.com/GiladShoham/graphql-apollo-errors) which use SevenBoom internally to handle graphql / apollo errors in a better way.
+Or you can look at the spec files.
 
 ## Source of the name
 The name seven-boom is a wordplay - it's a combination of the boom (as the base library) and seven boom which is a simple game.
