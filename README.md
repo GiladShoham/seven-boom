@@ -100,15 +100,12 @@ If you want to use the default value for an arg which is not the last one you ca
 There is special case for the timeThrown and guid defaults.
 If you specify them as an args without falsy default (null, undefined etc), it will create a default default uses those functions:
 ```js
-function _getDefaultActionForArg(arg) {
-  if (arg && !arg.default){
-    arg.default = defaultArgsActions[arg.name];
-  }
-  return arg;
-}
-
 function _defaultTimeThrown() {
   return (new Date()).toISOString();
+}
+
+function _defaultGenerateGuid() {
+  return uuid.v4();
 }
 ```
 If you don't specify them as an args at all they won't be used.
