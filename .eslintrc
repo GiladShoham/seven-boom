@@ -1,0 +1,32 @@
+{
+
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb/base",
+    "plugin:import/errors",
+    "eslint:recommended",
+  ],
+  "env": {
+    "es6": true,
+    "mocha": true,
+    "node": true,
+    "browser": true
+  },
+
+  "rules": {
+    "strict": 0,
+    "no-use-before-define": 0,
+    "arrow-body-style": 0,
+    "dot-notation": 0,
+    "no-console": 0
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "experimentalObjectRestSpread": true,
+    "sourceType": "module"
+  },
+
+  "extends": [ "eslint:recommended" ]
+
+}
