@@ -11,6 +11,10 @@
     "coverage": "istanbul cover _mocha -- --compilers js:babel-core/register \"lib/**/*.spec.js\" -R spec",
     "coveralls": "istanbul cover _mocha --report lcovonly -- --compilers js:babel-core/register \"lib/**/*.spec.js\" -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
+  "engines": {
+    "node": "6.9.1",
+    "npm": "3.10.8"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/GiladShoham/seven-boom"
