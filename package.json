@@ -37,10 +37,6 @@
     "chai-as-promised": "^5.3.0",
     "chai-date-string": "^0.1.0",
     "coveralls": "^2.11.11",
-    "eslint": "^2.10.2",
-    "eslint-config-airbnb": "^14.0.0",
-    "eslint-import-resolver-webpack": "^0.8.0",
-    "eslint-plugin-import": "^2.2.0",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^2.5.3",
     "mocha-lcov-reporter": "^1.2.0",
@@ -53,31 +49,5 @@
     "boom": "^4.2.0",
     "lodash": "^4.17.4",
     "uuid": "^3.0.1"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "plugin:import/errors",
-      "eslint:recommended"
-    ],
-    "rules": {
-      "no-use-before-define": 0,
-      "arrow-body-style": 0,
-      "dot-notation": 0,
-      "no-console": 0
-    },
-    "settings": {
-      "import/resolver": {
-        "webpack": {
-          "config": "./tools/webpack.config.js"
-        }
-      }
-    },
-    "env": {
-      "mocha": true
-    },
-    "plugins": [
-      "react"
-    ]
   }
 }
