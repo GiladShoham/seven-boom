@@ -49,19 +49,73 @@ SevenBoom give you an ability to init the SevenBoom object with your desired err
 * timeThrown generator (date.isoString) which will add timeThrown for any of your errors
 
 ## Boom compatability
-In order to make the transition from Boom easiear, the SevenBoom args will be in the same order as the default Boom args.
+In order to make the transition from Boom easier, the SevenBoom args will be in the same order as the default Boom args.
 So you can simply replace all of your Boom.XXX with SevenBoom.XXX and everything should work just fine.
 Then you can start change your usage every place you want (if you added more args).
 
 ## How does it work
-Under the hood, SevenBoom is preety simple, it just going over all Boom function and wrap them with new functions with the same name.
+Under the hood, SevenBoom is pretty simple, it just going over all Boom function and wrap them with new functions with the same name.
 Then when you call the SevenBoom function it will internally call Boom then add your new args, and run your functions
 
 ## Configure
-Coming soon
+you should import the SevenBoom class by
+```js
+import SevenBoom from 'seven-boom';
+```
+Then you should create an options object:
+```js
+const opts = [
+  {
+    name : 'errorName',
+    order: 1
+  }, {
+    name : 'timeThrown',
+    order: 2,
+    default: null
+  }, {
+    name : 'guid',
+    order: 3,
+    default: null
+  }
+];
+```
+finally you should call init
+```js
+SevenBoom.init(opts);
+```
+
+Option object is an array of args definitions.
+Arg definition conatains the following keys:
+name - the name will be the key inside the result.output.payload
+order - the order of the arg in the new function (i just sort by this order before pass the args on, so you can make skip for example order 1 then order 5 then order 10)
+default - default can be either a value like 'myDefaultVal' or a function which return a value for example
+```js
+function _defaultTimeThrown() {
+  return (new Date()).toISOString();
+}
+```
+The default will be used only in case you didn't pass an actual value. so you can always override it when calling the function.
+If you want to use the default value for an arg which is not the last one you can just pass undefined and the default will be used.
+
+There is special case for the timeThrown and guid defaults.
+If you specify them as an args without falsy default (null, undefined etc), it will create a default default uses those functions:
+```js
+function _getDefaultActionForArg(arg) {
+  if (arg && !arg.default){
+    arg.default = defaultArgsActions[arg.name];
+  }
+  return arg;
+}
+
+function _defaultTimeThrown() {
+  return (new Date()).toISOString();
+}
+```
+If you don't specify them as an args at all they won't be used.
 
 ## Usage
 You should start by reading Boom docs, it's very easy and intuitive.
+For more examples you can just look on the sevenBoom.spec.js file.
 
 ### Before
 #### Code
@@ -95,6 +149,21 @@ function getUserById(userId) {
 #### Code
 ```js
 import SevenBoom from 'seven-boom';
+const opts = [
+  {
+    name : 'errorName',
+    order: 1
+  }, {
+    name : 'timeThrown',
+    order: 2,
+    default: null
+  }, {
+    name : 'guid',
+    order: 3,
+    default: null
+  }
+];
+SevenBoom.init(opts);
 
 function getUserById(userId) {
  const errorMessage = `User with id: ${userId} not found`;
@@ -116,7 +185,7 @@ function getUserById(userId) {
       statusCode: '404',
       error: 'Not Found',
       message: 'User with id: 123 not found.',
-      code: 'USER_NOT_FOUND',
+      errorName: 'USER_NOT_FOUND',
       timeThrown: "2017-01-16T21:25:58.536Z",
       guid: 'b6c44655-0aae-486a-8d28-533db6c6c343',
       data: {userId: '123'}
