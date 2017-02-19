@@ -2,7 +2,7 @@
   "name": "seven-boom",
   "version": "1.0.0",
   "description": "A decorator around Boom (HTTP-friendly error objects) to empower it",
-  "main": "lib/sevenBoom.js",
+  "main": "dist/sevenBoom.js",
   "scripts": {
     "compile": "babel -d dist/ lib/",
     "watch": "babel --watch -d dist/ lib/",
