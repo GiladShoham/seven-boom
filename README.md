@@ -62,9 +62,9 @@ you should import the SevenBoom class by
 ```js
 import SevenBoom from 'seven-boom';
 ```
-Then you should create an options object:
+Then you should create an args definitions array:
 ```js
-const opts = [
+const argsDefs = [
   {
     name : 'errorName',
     order: 1
@@ -81,11 +81,10 @@ const opts = [
 ```
 finally you should call init
 ```js
-SevenBoom.init(opts);
+SevenBoom.init(argsDefs);
 ```
 
-Option object is an array of args definitions.
-Arg definition conatains the following keys:
+Arg definition contains the following keys:
 * name - the name will be the key inside the result.output.payload
 * order - the order of the arg in the new function (i just sort by this order before pass the args on, so you can make skip for example order 1 then order 5 then order 10)
 * default - default can be either a value like 'myDefaultVal' or a function which return a value for example
@@ -98,7 +97,7 @@ The default will be used only in case you didn't pass an actual value. so you ca
 If you want to use the default value for an arg which is not the last one you can just pass undefined and the default will be used.
 
 There is special case for the timeThrown and guid defaults.
-If you specify them as an args without falsy default (null, undefined etc), it will create a default default uses those functions:
+If you specify them as an args with a falsy default (null, undefined etc), it will create a default default uses those functions:
 ```js
 function _defaultTimeThrown() {
   return (new Date()).toISOString();
@@ -146,7 +145,7 @@ function getUserById(userId) {
 #### Code
 ```js
 import SevenBoom from 'seven-boom';
-const opts = [
+const argsDefs = [
   {
     name : 'errorName',
     order: 1
@@ -160,7 +159,7 @@ const opts = [
     default: null
   }
 ];
-SevenBoom.init(opts);
+SevenBoom.init(argsDefs);
 
 function getUserById(userId) {
  const errorMessage = `User with id: ${userId} not found`;
