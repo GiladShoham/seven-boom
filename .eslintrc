@@ -2,7 +2,6 @@
 
   "parser": "babel-eslint",
   "extends": [
-    "airbnb/base",
     "plugin:import/errors",
     "eslint:recommended",
   ],
@@ -25,8 +24,5 @@
     "ecmaVersion": 7,
     "experimentalObjectRestSpread": true,
     "sourceType": "module"
-  },
-
-  "extends": [ "eslint:recommended" ]
-
+  }
 }
