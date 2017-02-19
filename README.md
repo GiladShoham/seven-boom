@@ -86,9 +86,9 @@ SevenBoom.init(opts);
 
 Option object is an array of args definitions.
 Arg definition conatains the following keys:
-name - the name will be the key inside the result.output.payload
-order - the order of the arg in the new function (i just sort by this order before pass the args on, so you can make skip for example order 1 then order 5 then order 10)
-default - default can be either a value like 'myDefaultVal' or a function which return a value for example
+* name - the name will be the key inside the result.output.payload
+* order - the order of the arg in the new function (i just sort by this order before pass the args on, so you can make skip for example order 1 then order 5 then order 10)
+* default - default can be either a value like 'myDefaultVal' or a function which return a value for example
 ```js
 function _defaultTimeThrown() {
   return (new Date()).toISOString();
