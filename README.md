@@ -1,6 +1,8 @@
 # seven-boom
 A decorator around [Boom](https://github.com/hapijs/boom) (HTTP-friendly error objects) to empower it
 
+This library is fully tested with 100% coverage
+
 [![CircleCI](https://circleci.com/gh/GiladShoham/seven-boom/tree/master.svg?style=svg&circle-token=56ee1bfc2964727d5d468cc2f2b2216054cee97f)](https://circleci.com/gh/GiladShoham/seven-boom/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/GiladShoham/seven-boom/badge.svg)](https://coveralls.io/github/GiladShoham/seven-boom)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CYFBUDM226DLS&lc=IL&item_name=seven%2dboom&item_number=github%2dnpm&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
