@@ -3,7 +3,7 @@ A decorator around [Boom](https://github.com/hapijs/boom) (HTTP-friendly error o
 
 [![CircleCI](https://circleci.com/gh/GiladShoham/seven-boom/tree/master.svg?style=svg&circle-token=56ee1bfc2964727d5d468cc2f2b2216054cee97f)](https://circleci.com/gh/GiladShoham/seven-boom/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/GiladShoham/seven-boom/badge.svg)](https://coveralls.io/github/GiladShoham/seven-boom)
-
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CYFBUDM226DLS&lc=IL&item_name=seven%2dboom&item_number=github%2dnpm&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 <!-- toc -->
 
 - [seven-boom](#seven-boom)
@@ -206,7 +206,7 @@ MIT - Do what ever you want
 I'm open to hear any feedback - new ideas, bugs, needs.
 Feel free to open issues / PR
 
-## Support on Beerpay
+## Support on Paypal
 Hey dude! Help me out for a couple of :beers:!
 
-[![Beerpay](https://beerpay.io/GiladShoham/seven-boom/badge.svg?style=beer-square)](https://beerpay.io/GiladShoham/seven-boom)  [![Beerpay](https://beerpay.io/GiladShoham/seven-boom/make-wish.svg?style=flat-square)](https://beerpay.io/GiladShoham/seven-boom?focus=wish)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CYFBUDM226DLS&lc=IL&item_name=seven%2dboom&item_number=github%2dnpm&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
