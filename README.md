@@ -205,3 +205,8 @@ MIT - Do what ever you want
 ## Contribute
 I'm open to hear any feedback - new ideas, bugs, needs.
 Feel free to open issues / PR
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/GiladShoham/seven-boom/badge.svg?style=beer-square)](https://beerpay.io/GiladShoham/seven-boom)  [![Beerpay](https://beerpay.io/GiladShoham/seven-boom/make-wish.svg?style=flat-square)](https://beerpay.io/GiladShoham/seven-boom?focus=wish)
